@@ -1,0 +1,17 @@
+      AREA     appcode, CODE, READONLY
+     EXPORT __main
+	 ENTRY 
+__main  FUNCTION		 		
+         MOV R0, #19   
+         MOV R1, #27     
+		     MOV R2, #89   
+         CMP R0, R1
+		 IT HI
+         MOVHI R1,R0
+		 CMP R1,R2
+		 IT HI
+		 MOVHI R2,R1
+		 MOV R3,R2
+halt    B halt
+     ENDFUNC
+     END
