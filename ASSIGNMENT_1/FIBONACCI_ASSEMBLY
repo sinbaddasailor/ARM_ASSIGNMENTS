@@ -1,0 +1,19 @@
+AREA     appcode, CODE, READONLY
+     EXPORT __main
+	 ENTRY 
+__main  FUNCTION		 		
+           MOV R0,#0 
+    MOV R1,#1
+    MOV R3,#67;N 
+    MOV R4,#0;every element in series will be stored in r4 
+    ADD R4,R0,R1
+loop1 CMP R4,R3;if(val > req) 
+    BLE LOOP
+    B halt
+LOOP MOV R0,R1
+     MOV R1,R4
+     ADD R4,R0,R1 
+     B loop1
+halt    B halt
+     ENDFUNC
+     END
