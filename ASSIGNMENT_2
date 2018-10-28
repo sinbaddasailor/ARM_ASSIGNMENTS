@@ -1,0 +1,24 @@
+IT or the if-then instruction is used for checking a condition given in terms of an instruction.
+
+ITTE is ARM's IF-THEN-ELSE instruction and was introduced in the Thumb-2 instruction set.
+
+The above instruction is used for handling groups of conditional code of up to 4 instructions.
+The instructions must have the conditional part of there syntax specified. 
+These conditions can be logically same or inverse. 
+
+In the wrong code
+
+ITTTE LT
+MOV R3
+
+The instrucitons following IT is not conditional as opposed to 
+
+ITTTE LT
+ADDLT
+MOVLT
+MOVLT
+SUBGE
+
+where all the instructions after IT are conditional in nature.
+
+This explains the errors. 
