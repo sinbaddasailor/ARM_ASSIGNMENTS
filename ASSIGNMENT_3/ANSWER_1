@@ -1,0 +1,32 @@
+a. "Presision" refers to the smallest change that can be represented by "float". 
+The fractional part determines the precision of Floating point number, which is called mantissa. 
+For example the number 89 can be represented as 	0.089*10^3, 0.890*10^2, 8.900*10^1.
+Among the above, the last is more précised since there are three places in the right of the decimal point says that if 
+any extra error in actual result like 8.901*10^1, then the error is only 0.011%.
+
+b. Now, normal representations won’t have so many  leadings zero’s. But, the other representation has minimum number in its exponent value 
+which leads to more zero’s in its mantissa. For example:0.05 decimal value can be represented in binary by 2 ways:
+1. Normal Representation: 1.01*2^-6
+2. Other Representation: 0.00101*2^-3
+
+c. IEEE754 standard defines the following five rules:
+	i. Rounding to nearest, ties to even: In this method, the real number is rounded off to the nearest even number.
+		For example: 5.3 is rounded off to 6.0
+	ii. Rounding to nearest, ties away from zero: In this method, the actual number is rounded off to the nearest integer. If the number 
+  falls into the middle of two integers, it is rounded to the nearest value above (for positive numbers) and below (for negative numbers).
+		For example: 5.3 is rounded off to 5.0
+				5.5  is rounded off to 6.0
+				-5.5 is rounded off to -6.0
+ iii. Round towards zero: In this method the actual number is truncated to the nearest integer while going towards to zero.
+	For example: 5.5 is rounded off to 5.0
+			5.9 is rounded off to 5.0
+			-5.6 is rounded off to -5.0
+iv. Round toward positive infinity : In this method the actual number is truncated to the nearest integer while going towards to positive 
+infinity.
+	For example: 5.5 is rounded off to 6.0
+			5.9 is rounded off to 6.0
+			-5.6 is rounded off to -5.0
+v. Round toward negative infinity : In this method the actual number is truncated to the nearest integer while going towards to zero.
+	For example: 5.5 is rounded off to 5.0
+			5.9 is rounded off to 5.0
+			-5.6 is rounded off to -6.0
